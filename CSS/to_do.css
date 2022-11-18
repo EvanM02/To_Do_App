@@ -1,58 +1,59 @@
 /*dropdown menu */
 
-.dropdown {
-    position: absolute !important;
-    z-index: 1 !important;
-    color: black;
-    background-color: rgb(227, 230, 233);
-    font-size: medium !important;
-    
+.btn {
+  border-radius: 0px;
 }
+.dropdown {
+  position: absolute !important;
+  z-index: 1 !important;
+  color: black;
+  background-color: rgb(227, 230, 233);
+}
+
 #dropdownMenuLink {
-    color:black;
+  color: black;
+  border-radius: 0px !important;
 }
 
 .dropdown-item {
-    font-size: medium !important;
-    margin: 0 !important;
+  font-size: medium !important;
+  margin: 0 !important;
 }
-
 
 h1 {
-    text-align: center;
-
+  text-align: center;
 }
 input {
-    margin-left: 450px;
-    width: 500px;
-    height: 60px;
-    font-size: 40px;
-    border: 0;
-    background-color: rgb(224, 228, 227);
+  margin-left: 450px;
+  width: 250px;
+  height: 40px;
+  font-size: 20px;
+  border: 0;
+  background-color: rgb(224, 228, 227);
 }
-
-input:focus {
-    outline: none;
+input::placeholder {
+  font-variant: small-caps;
 }
 
 #add {
-    margin-left: 20px;
+  margin-left: 20px;
+  height: 40px;
 }
 
 #todos {
-    text-align: left;
-    font-size: 40px;
-    list-style: none;
-    margin-left: 500px;
+  text-align: left;
+  font-size: 30px;
+  margin-left: 450px;
+  max-width: 6in;
+  padding-bottom: 30px;
 }
 
 .remove {
-    margin: 5px;
-    position: relative; top: 8px;
-}
-
-input:task {
-    border: 2px black;
-    margin-left: 500px;
-    padding-left: 500px;
+  margin-left: 15px;
+  padding-right: 12px;
+  height: 20px;
+  width: 20px;
+  border-radius: 25%;
+  font-size: 10px;
+  font-weight: bolder;
 }
