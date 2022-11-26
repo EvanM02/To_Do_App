@@ -21,7 +21,7 @@ function add() {
 
   const arr = todos || []
 
-  if (Array.isArray(todos)) {
+  if (Array.isArray(arr)) {
       /* this adds a new task the end of the array*/
   todos.push(task);
   }
