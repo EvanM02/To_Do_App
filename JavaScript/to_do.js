@@ -1,4 +1,3 @@
-
 /* This function adds the inputted task to the get_todos function array */
 function add() {
   /* this takes the inputted task and creates a variable of it */
@@ -11,9 +10,21 @@ function add() {
   /*this converts the task input to a JSON string */
   localStorage.setItem("todo", JSON.stringify(todos));
   document.getElementById("task").value = "";
-  window.location.reload();
   show();
+  window.location.reload();
+
+  return false;
+
 }
+
+
+/* This checks to see if user has clicked enter when typing in the input field if true, it runs the add() function */
+task.addEventListener("keypress", function (event) {
+  if (event.key == "Enter") {
+    add(); get_todos();
+  }
+});
+
 
 /* this function gets the task from input field */
 function get_todos() {
@@ -22,11 +33,12 @@ function get_todos() {
   /* this pulls the task that was saved in the web browser memory */
   var todos_str = localStorage.getItem("todo");
   /* if the input is not null then JSON.parse will communicate with the web browser to make the task a JavaScript object */
-  if (todos_str !== null) {
+  if (todos_str !== "undefined") {
     todos = JSON.parse(todos_str);
   }
   return todos;
 }
+
 
 
 /* this function keeps the tasks permanently displayed on the screen*/
@@ -48,20 +60,10 @@ function show() {
   document.getElementById("todos").innerHTML = html;
 }
 
-/* This checks to see if user has clicked enter when typing in the input field if true, it runs the add() function */
-task.addEventListener("keypress", function (event) {
-  if (event.key == "Enter") {
-    add();
-  }
-});
+
 
 /* this displays the inputted task when the "add item" button is clicked*/
 document.getElementById("add").addEventListener("click", add);
-/* this will keep the inputs displayed permanently on the screen*/
-show();
-
-/* this displays the inputted task when the "add item" button is clicked*/
-document.getElementById("add").addEventListener("touchend", add);
 /* this will keep the inputs displayed permanently on the screen*/
 show();
 
