@@ -1,29 +1,12 @@
-/* this function gets the task from input field */
-function get_todos() {
-  /* this creates an array of task that are inputted */
-  var todos = new Array();
-  /* this pulls the task that was saved in the web browser memory */
-  var todos_str = localStorage.getItem("todo");
-  /* if the input is not null then JSON.parse will communicate with the web browser to make the task a JavaScript object */
-  if (todos_str !== "") {
-    todos = JSON.parse(todos_str);
-  }
-  return todos;
-}
-/* This function adds the inputted task to the todos array */
+
+/* This function adds the inputted task to the get_todos function array */
 function add() {
   /* this takes the inputted task and creates a variable of it */
-  var task = document.getElementById("task").value;
-
-  
+  var task = document.getElementById ('task').value;
 
   var todos = get_todos();
-
-  const arr = todos || []
-
-      /* this adds a new task the end of the array*/
-      arr.push(task);
-
+  /* this adds a new task the end of the array*/
+  todos.push(task);
 
   /*this converts the task input to a JSON string */
   localStorage.setItem("todo", JSON.stringify(todos));
@@ -31,6 +14,20 @@ function add() {
   window.location.reload();
   show();
 }
+
+/* this function gets the task from input field */
+function get_todos() {
+  /* this creates an array of task that are inputted */
+  var todos = new Array();
+  /* this pulls the task that was saved in the web browser memory */
+  var todos_str = localStorage.getItem("todo");
+  /* if the input is not null then JSON.parse will communicate with the web browser to make the task a JavaScript object */
+  if (todos_str !== null) {
+    todos = JSON.parse(todos_str);
+  }
+  return todos;
+}
+
 
 /* this function keeps the tasks permanently displayed on the screen*/
 function show() {
