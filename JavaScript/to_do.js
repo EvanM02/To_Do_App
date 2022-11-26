@@ -56,6 +56,11 @@ document.getElementById("add").addEventListener("click", add);
 /* this will keep the inputs displayed permanently on the screen*/
 show();
 
+/* this displays the inputted task when the "add item" button is clicked*/
+document.getElementById("add").addEventListener("touchend", add);
+/* this will keep the inputs displayed permanently on the screen*/
+show();
+
 /* this will remove items in the array when you click on the x */
 function remove() {
   var id = this.getAttribute("id");
