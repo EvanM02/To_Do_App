@@ -48,6 +48,12 @@ function show() {
 
   /* this sets up each task as unordered list*/
   var html = "<ul>";
+
+  if ( todos !== "undefined") {
+  /* this displays a task to the list in the order that it is inputted */
+  for (var i = 0; i < todos.length; i++) {
+  }
+  
   /* this displays a task to the list in the order that it is inputted */
   for (var i = 0; i < todos.length; i++) {
     /* this also displays the tasks as a list and creates the button with a "x" */
