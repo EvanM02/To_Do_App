@@ -53,7 +53,7 @@ function show() {
   /* this displays a task to the list in the order that it is inputted */
   for (var i = 0; i < todos.length; i++) {
   }
-  
+
   /* this displays a task to the list in the order that it is inputted */
   for (var i = 0; i < todos.length; i++) {
     /* this also displays the tasks as a list and creates the button with a "x" */
@@ -65,7 +65,7 @@ function show() {
   /* this displays the task as a list */
   document.getElementById("todos").innerHTML = html;
 }
-
+}
 
 
 /* this displays the inputted task when the "add item" button is clicked*/
