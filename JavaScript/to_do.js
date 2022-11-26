@@ -19,6 +19,8 @@ function add() {
 
   var todos = get_todos();
 
+  const arr = todos || []
+
   if (Array.isArray(todos)) {
       /* this adds a new task the end of the array*/
   todos.push(task);
@@ -28,7 +30,7 @@ function add() {
   }
 
 
-  
+
   /*this converts the task input to a JSON string */
   localStorage.setItem("todo", JSON.stringify(todos));
   document.getElementById("task").value = "";
