@@ -36,14 +36,22 @@ function show() {
   for (var i = 0; i < todos.length; i++) {
     /* this also displays the tasks as a list and creates the button with a "x" */
     html +=
-      "<li>" + todos[i] + '<button class="remove" ' + i + "> X </button></li>";
+      "<li>" + '<button class="remove" ' + i + "> x </button> " + todos[i];
+    ("</li>");
   }
   html += "</ul>";
   /* this displays the task as a list */
   document.getElementById("todos").innerHTML = html;
 }
 
-/* this displays the imputed task when the "add item" button is clicked*/
+/* This checks to see if user has clicked enter when typing in the input field if true, it runs the add() function */
+task.addEventListener("keypress", function (event) {
+  if (event.key == "Enter") {
+    add();
+  }
+});
+
+/* this displays the inputted task when the "add item" button is clicked*/
 document.getElementById("add").addEventListener("click", add);
 /* this will keep the inputs displayed permanently on the screen*/
 show();

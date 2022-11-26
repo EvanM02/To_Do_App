@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <title>To Do App</title>
+    <meta
+      name="description"
+      content="Webapp where the user types in input field a list of
+    items or things that need to be done. Then it will be held in their browser until they 
+    check if off.  "
+    />
+    <meta name="keywords" content="List, to do, Webapp " />
+    <link rel="icon" href="./Images/to_do_image.png" type="image/icon" />
 
     <!-- bootstrap links-->
     <link
@@ -21,9 +29,9 @@
   </head>
   <body>
     <!--OTHER WEBSITE LINKS DROPDOWN MENU-->
-    <div class="dropdown navbar-light">
+    <div class="dropdown">
       <a
-        class="btn btn-secondary dropdown-toggle bg-transparent border-1"
+        class="btn btn-secondary dropdown-toggle"
         role="button"
         id="dropdownMenuLink"
         data-bs-toggle="dropdown"
@@ -31,7 +39,7 @@
       >
         Websites
       </a>
-      <ul class="dropdown-menu navbar-light" aria-labelledby="dropdownMenuLink">
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         <li>
           <a
             class="dropdown-item"
@@ -102,13 +110,24 @@
     </div>
     <!--END OF DROP DOWN MENU-->
 
-    <h1>Input items in order of what needs to be done first</h1>
+    <main>
+      <div class="grid">
+        <h1>Input items in order of what needs to be done first</h1>
 
-    <input id="task" placeholder="input task here " /><button id="add">
-      Add Item
-    </button>
-    <hr />
-    <div id="todos"></div>
+        <div class="input_and_add">
+          <input id="task" placeholder=" Input task here " /><button id="add">
+            Add Item
+          </button>
+        </div>
+
+        <div class="dividing_line">
+          <hr />
+        </div>
+        <hr />
+
+        <div id="todos"></div>
+      </div>
+    </main>
 
     <script src="./JavaScript/to_do.js"></script>
   </body>
