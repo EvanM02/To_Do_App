@@ -21,14 +21,8 @@ function add() {
 
   const arr = todos || []
 
-  if (Array.isArray(arr)) {
       /* this adds a new task the end of the array*/
-  todos.push(task);
-  }
-  else {
-    console.log("this there is no array here ")
-  }
-
+      arr.push(task);
 
 
   /*this converts the task input to a JSON string */
