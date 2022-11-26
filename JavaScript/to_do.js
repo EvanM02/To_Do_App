@@ -4,8 +4,7 @@ function add() {
   var task = document.getElementById ('task').value;
 
   var todos = get_todos();
-  /* this adds a new task the end of the array*/
-  todos.push(task);
+
 
   /*this converts the task input to a JSON string */
   localStorage.setItem("todo", JSON.stringify(todos));
@@ -45,6 +44,9 @@ function get_todos() {
 function show() {
   /* this sets the task that was retrieved as ta variable */
   var todos = get_todos();
+  
+  /* this adds a new task the end of the array*/
+  todos.push(task);
 
   /* this sets up each task as unordered list*/
   var html = "<ul>";
