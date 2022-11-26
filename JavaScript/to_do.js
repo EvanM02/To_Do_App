@@ -46,7 +46,7 @@ function show() {
   /* this sets the task that was retrieved as a variable */
   var todos = get_todos();
   
-  if (todos !== "undefined") {
+  if (todos !== null) {
   /* this adds a new task the end of the array*/
   todos.push(task);
   }
