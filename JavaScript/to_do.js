@@ -42,11 +42,14 @@ function get_todos() {
 
 /* this function keeps the tasks permanently displayed on the screen*/
 function show() {
-  /* this sets the task that was retrieved as ta variable */
+  
+  /* this sets the task that was retrieved as a variable */
   var todos = get_todos();
   
+  if (todos !== "undefined") {
   /* this adds a new task the end of the array*/
   todos.push(task);
+  }
 
   /* this sets up each task as unordered list*/
   var html = "<ul>";
