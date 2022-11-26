@@ -1,6 +1,6 @@
-/* this function gets the task from input */
+/* this function gets the task from input field */
 function get_todos() {
-  /* this creates an array of  task that are inputted */
+  /* this creates an array of task that are inputted */
   var todos = new Array();
   /* this pulls the task that was saved in the web browser memory */
   var todos_str = localStorage.getItem("todo");
@@ -15,9 +15,20 @@ function add() {
   /* this takes the inputted task and creates a variable of it */
   var task = document.getElementById("task").value;
 
+  
+
   var todos = get_todos();
-  /* this adds a new task the end of the array*/
+
+  if (Array.isArray(todos)) {
+      /* this adds a new task the end of the array*/
   todos.push(task);
+  }
+  else {
+    console.log("this there is no array here ")
+  }
+
+
+  
   /*this converts the task input to a JSON string */
   localStorage.setItem("todo", JSON.stringify(todos));
   document.getElementById("task").value = "";
