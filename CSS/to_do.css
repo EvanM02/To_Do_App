@@ -64,12 +64,12 @@ body {
   box-shadow: 1px 1px 1px;
 }
 
+/* Separating line */
 .dividing_line {
   grid-column-start: 1;
   grid-column-end: span 3;
   grid-row-start: 3;
 }
-
 /* Separating line */
 hr {
   border: none;
@@ -120,4 +120,19 @@ button.remove:hover {
 }
 button.remove:active {
   box-shadow: 0px 0px 0px;
+}
+
+/* This is the styling for tablets in portrait orientation */
+@media screen and (min-width: 501px) and (max-width: 880px) and (orientation: portrait) {
+  .grid h1 {
+    font-size: 2.5rem;
+    color: red;
+  }
+  #task {
+    height: 50px;
+  
+  }
+  #todos {
+    font-size: 2.5rem;
+  }
 }
