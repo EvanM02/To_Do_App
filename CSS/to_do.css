@@ -130,9 +130,8 @@ button.remove:active {
 
   /* input and add button */
   .input_and_add {
-  grid-column-start: 1;
+  grid-column-start: 2;
   grid-column-end: span 3;
-  margin-left: 15%;
 }
 
   #task {
@@ -145,7 +144,7 @@ button.remove:active {
   }
 
   #todos {
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-column-end: span 3;
     font-size: 1.5rem;
     margin-left: 10%;
