@@ -123,7 +123,11 @@ button.remove:active {
 }
 
 /* This is the styling for tablets in landscape orientation */
-@media screen and (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
+@media screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
+  .grid h1 {
+  font-size: 1.5rem;
+  }
+
   #task {
     height: 40px;
 }
@@ -132,13 +136,13 @@ button.remove:active {
   }
   #todos {
     grid-column-start: 1;
-    grid-column-end: span 3;
-    margin-left: 15%;
+    grid-column-end: span 2;
+    margin-left: 10%;
   }
 
 }
 /* This is the styling for tablets in portrait orientation */
-@media screen and (min-width: 600px) and (max-width: 900px) and (orientation: portrait) {
+@media screen and (min-width: 500px) and (max-width: 900px) and (orientation: portrait) {
   .input_and_add {
     grid-column-start: 1;
     grid-column-end: span 3;
@@ -147,7 +151,7 @@ button.remove:active {
 }
 
 /* This is the styling for smartphones */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .grid h1 {
     font-size: 1.6rem;
   }
