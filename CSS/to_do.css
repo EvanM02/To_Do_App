@@ -71,7 +71,7 @@ body {
   grid-row-start: 3;
 }
 /* Separating line */
-hr {
+.dividing_line hr {
   border: none;
   height: 4px;
   background-image: linear-gradient(
@@ -158,14 +158,14 @@ button.remove:active {
 
 }
 /* This is the styling for tablets in portrait orientation */
-@media screen and (min-width: 500px) and (max-width: 900px) and (orientation: portrait) {
+@media screen and (min-width: 500px) and (max-width: 750px) and (orientation: portrait) {
   .grid h1 {
     font-size: 1.4rem;
     }
-  
+
     /* input and add button */
     .input_and_add {
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-column-end: span 3;
   }
   
@@ -173,13 +173,11 @@ button.remove:active {
       height: 35px;
       background-color: wheat;
   }
-  
-    hr {
-      height: 10px;
-    }
-  
+  .dividing_line hr {
+    height: 10px;
+  }
     #todos {
-      grid-column-start: 1;
+      grid-column-start: 2;
       grid-column-end: span 3;
       font-size: 1.4rem;
     }
@@ -199,18 +197,30 @@ button.remove:active {
 /* This is the styling for smartphones */
 @media screen and (max-width: 500px) {
   .grid h1 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
   .input_and_add {
     grid-column-start: 1;
     grid-column-end: span 3;
   }
   #task {
-  width: 80px;
+    height: 35px;
   }
   #todos {
     grid-column-start: 1;
     grid-column-end: span 3;
+    font-size: 1.4rem;
+  }
+#todos li {
+  padding-bottom: 30px;
+}
+  button.remove {
+    font-size: 0.8rem;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    box-shadow: 0px 0px 4px rgb(247, 242, 242);
+    
   }
 
 }
