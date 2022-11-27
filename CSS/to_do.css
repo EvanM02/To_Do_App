@@ -147,7 +147,6 @@ button.remove:active {
     grid-column-start: 2;
     grid-column-end: span 3;
     font-size: 1.5rem;
-    margin-left: 10%;
   }
   button.remove {
     font-size: 1rem;
@@ -160,11 +159,41 @@ button.remove:active {
 }
 /* This is the styling for tablets in portrait orientation */
 @media screen and (min-width: 500px) and (max-width: 900px) and (orientation: portrait) {
-  .input_and_add {
+  .grid h1 {
+    font-size: 1.4rem;
+    }
+  
+    /* input and add button */
+    .input_and_add {
     grid-column-start: 1;
     grid-column-end: span 3;
-    margin-left: 15%;
   }
+  
+    #task {
+      height: 35px;
+      background-color: wheat;
+  }
+  
+    hr {
+      height: 10px;
+    }
+  
+    #todos {
+      grid-column-start: 1;
+      grid-column-end: span 3;
+      font-size: 1.4rem;
+    }
+  #todos li {
+    padding-bottom: 30px;
+  }
+    button.remove {
+      font-size: 0.8rem;
+      border-radius: 50%;
+      height: 25px;
+      width: 25px;
+      box-shadow: 0px 0px 4px rgb(247, 242, 242);
+      
+    }
 }
 
 /* This is the styling for smartphones */
