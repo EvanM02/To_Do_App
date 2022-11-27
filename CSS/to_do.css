@@ -125,27 +125,37 @@ button.remove:active {
 /* This is the styling for tablets in landscape orientation */
 @media screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
   .grid h1 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   }
 
   /* input and add button */
   .input_and_add {
   grid-column-start: 1;
-  grid-column-end: span 2;
+  grid-column-end: span 3;
+  margin-left: 15%;
 }
 
   #task {
-    height: 50px;
+    height: 35px;
     background-color: wheat;
 }
 
   hr {
-    height: 8px;
+    height: 10px;
   }
 
   #todos {
     grid-column-start: 1;
-    grid-column-end: span 2;
+    grid-column-end: span 3;
+    font-size: 1.5rem;
+    margin-left: 10%;
+  }
+  button.remove {
+    font-size: 1rem;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+
   }
 
 }
