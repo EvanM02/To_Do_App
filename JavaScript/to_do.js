@@ -1,64 +1,37 @@
-/* This function adds the inputted task to the get_todos function array */
-function add() {
-  /* this takes the inputted task and creates a variable of it */
-  var task = document.getElementById ('task').value;
-
-  var todos = get_todos();
-
-
-  /*this converts the task input to a JSON string */
-  localStorage.setItem("todo", JSON.stringify(todos));
-  document.getElementById("task").value = "";
-  show();
-  window.location.reload();
-
-  return false;
-
-}
-
-
-/* This checks to see if user has clicked enter when typing in the input field if true, it runs the add() function */
-task.addEventListener("keypress", function (event) {
-  if (event.key == "Enter") {
-    add(); get_todos();
-  }
-});
-
-
-/* this function gets the task from input field */
+/* this function gets the task from input */
 function get_todos() {
-  /* this creates an array of task that are inputted */
+  /* this creates an array of  task that are inputted */
   var todos = new Array();
   /* this pulls the task that was saved in the web browser memory */
   var todos_str = localStorage.getItem("todo");
   /* if the input is not null then JSON.parse will communicate with the web browser to make the task a JavaScript object */
-  if (todos_str !== "undefined") {
+  if (todos_str !== "") {
     todos = JSON.parse(todos_str);
   }
   return todos;
 }
+/* This function adds the inputted task to the todos array */
+function add() {
+  /* this takes the inputted task and creates a variable of it */
+  var task = document.getElementById("task").value;
 
-
+  var todos = get_todos();
+  /* this adds a new task the end of the array*/
+  todos.push(task);
+  /*this converts the task input to a JSON string */
+  localStorage.setItem("todo", JSON.stringify(todos));
+  document.getElementById("task").value = "";
+  window.location.reload();
+  show();
+}
 
 /* this function keeps the tasks permanently displayed on the screen*/
 function show() {
-  
-  /* this sets the task that was retrieved as a variable */
+  /* this sets the task that was retrieved as ta variable */
   var todos = get_todos();
-  
-  if (todos !== null) {
-  /* this adds a new task the end of the array*/
-  todos.push(task);
-  }
 
   /* this sets up each task as unordered list*/
   var html = "<ul>";
-
-  if ( todos !== null ) {
-  /* this displays a task to the list in the order that it is inputted */
-  for (var i = 0; i < todos.length; i++) {
-  }
-
   /* this displays a task to the list in the order that it is inputted */
   for (var i = 0; i < todos.length; i++) {
     /* this also displays the tasks as a list and creates the button with a "x" */
@@ -70,8 +43,13 @@ function show() {
   /* this displays the task as a list */
   document.getElementById("todos").innerHTML = html;
 }
-}
 
+/* This checks to see if user has clicked enter when typing in the input field if true, it runs the add() function */
+task.addEventListener("keypress", function (event) {
+  if (event.key == "Enter") {
+    add();
+  }
+});
 
 /* this displays the inputted task when the "add item" button is clicked*/
 document.getElementById("add").addEventListener("click", add);
