@@ -125,19 +125,27 @@ button.remove:active {
 /* This is the styling for tablets in landscape orientation */
 @media screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
   .grid h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   }
 
-  #task {
-    height: 40px;
+  /* input and add button */
+  .input_and_add {
+  grid-column-start: 1;
+  grid-column-end: span 2;
 }
+
+  #task {
+    height: 50px;
+    background-color: wheat;
+}
+
   hr {
-    height: 6px;
+    height: 8px;
   }
+
   #todos {
     grid-column-start: 1;
     grid-column-end: span 2;
-    margin-left: 10%;
   }
 
 }
