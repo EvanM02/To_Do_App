@@ -124,21 +124,43 @@ button.remove:active {
 
 /* This is the styling for tablets in landscape orientation */
 @media screen and (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
-  body {
-    background-color: green !important;
-  }
+  #task {
+    height: 40px;
 }
+  hr {
+    height: 6px;
+  }
+  #todos {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    margin-left: 15%;
+  }
 
+}
 /* This is the styling for tablets in portrait orientation */
 @media screen and (min-width: 600px) and (max-width: 900px) and (orientation: portrait) {
-  body {
-    background-color: blue !important;
+  .input_and_add {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    margin-left: 15%;
   }
 }
 
 /* This is the styling for smartphones */
 @media screen and (max-width: 600px) {
-  body {
-    background-color: red !important;
+  .grid h1 {
+    font-size: 1.6rem;
   }
+  .input_and_add {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+  }
+  #task {
+  width: 80px;
+  }
+  #todos {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+  }
+
 }
