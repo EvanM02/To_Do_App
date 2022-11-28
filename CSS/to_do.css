@@ -159,7 +159,7 @@ button.remove:active {
 /* This is the styling for tablets in portrait orientation */
 @media screen and (min-width: 500px) and (max-width: 750px) and (orientation: portrait) {
   .grid h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   /* input and add button */
@@ -178,7 +178,7 @@ button.remove:active {
   #todos {
     grid-column-start: 2;
     grid-column-end: span 3;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   #todos li {
     padding-bottom: 30px;
